@@ -1,0 +1,55 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* COLORS */
+    --color-background: #191936;
+    --color-primary: #6780FF;
+    --color-secondary: #8D8D8D;
+    --color-text: #FFFFFF;
+    --color-error: #FF5454;
+    --color-success: #0AB4AA;
+    --color-accent: #BA90FF;
+}
+
+body {
+    background-color: var(--color-background);
+    font-family: 'Noah', sans-serif;
+    color: var(--color-text);
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto; 
+}
+
+.promo__text,
+.services__text {
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.section-title,
+.about__title,
+.areas-work__title,
+.services__title,
+.equipment__title,
+.results__title,
+.faq__title,
+.conscription__title {
+    color: var(--color-primary);
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.section-title--big,
+.services__subtitle {
+    font-size: 64px;
+    max-width: 692px;
+    line-height: 0.8; 
+}

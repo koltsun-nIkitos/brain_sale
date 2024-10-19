@@ -1,0 +1,36 @@
+/* Import fonts */
+@import url('./fonts.css');
+
+/* Import css (common settings) */
+@import url('./style.css');
+
+@import url('./header.css');
+
+@import url('./promo.css');
+
+@import url('./about.css');
+
+@import url('./services.css');
+
+@import url('./equipment.css');
+
+@import url('./results.css');
+
+@import url('./FAQ.css');
+
+@import url('./conscription.css');
+
+@import url('./footer.css');
+
+/* Others pages
+    RESEARCH
+*/
+
+@import url('./research.css');
+
+
+/* Адаптив */
+@import url('./adaptive.css');
+
+/* modal */
+@import url('./modal.css');

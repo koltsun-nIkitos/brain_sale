@@ -1,0 +1,43 @@
+@font-face {
+    font-family: 'Noah';
+    font-weight: normal;
+    font-style: normal;
+    src: local('Noah-Regular'), local('Noah Regular'),
+        url('../fonts/regular/Noah-Regular.woff2'),
+        url('../fonts/regular/Noah-Regular.woff'),
+        url('../fonts/regular/Noah-Regular.ttf'),
+        url('../fonts/regular/Noah-Regular.eot');
+}
+
+@font-face {
+    font-family: 'Noah';
+    font-weight: normal;
+    font-style: italic;
+    src: local('Noah-RegularItalic'), local('Noah Regular Italic'),
+        url('../fonts/regular/Noah-RegularItalic.woff2'),
+        url('../fonts/regular/Noah-RegularItalic.woff'),
+        url('../fonts/regular/Noah-RegularItalic.ttf'),
+        url('../fonts/regular/Noah-RegularItalic.eot');
+}
+
+@font-face {
+    font-family: 'Noah';
+    font-weight: bold;
+    font-style: normal;
+    src: local('Noah-Bold'), local('Noah Bold'),
+        url('../fonts/bold/Noah-Bold.woff2'),
+        url('../fonts/bold/Noah-Bold.woff'),
+        url('../fonts/bold/Noah-Bold.ttf'),
+        url('../fonts/bold/Noah-Bold.eot');
+}
+
+@font-face {
+    font-family: 'Noah';
+    font-weight: bold;
+    font-style: italic;
+    src: local('Noah-BoldItalic'), local('Noah Bold Italic'),
+        url('../fonts/bold/Noah-BoldItalic.woff2'),
+        url('../fonts/bold/Noah-BoldItalic.woff'),
+        url('../fonts/bold/Noah-BoldItalic.ttf'),
+        url('../fonts/bold/Noah-BoldItalic.eot');
+}

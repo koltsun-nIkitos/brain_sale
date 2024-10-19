@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Brain.Sale - форма исследования</title>
+</head>
+<body>
+    <div class="modal" id="modalPopup">
+        <div class="modal__body">
+            <a href="#" class="modal-close">
+                <img src="./img/modal_close.png" alt="modal close icon" class="modal-close-img">
+            </a>
+            <div class="modal__content">
+                <h2 class="modal__title">Заявка отправлена</h2>
+                <p class="modal__subtitle">
+                    Менеджер свяжется с вами, чтобы уточнить детали заказа и подтвердить итоговую стоимость.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="header__container container"> 
+            <a href="./index.html" class="header__logo">
+                <img src="./img/Logo-BS.svg" alt="logo link" class="header__logo-img">
+            </a>
+    
+            <div class="header__nav-container">
+                <div class="header__nav-top">
+                    <nav class="header__nav">
+                        <a href="./index.html#services" class="header__nav-link" data-translate="header__link1">Услуги</a>
+                        <a href="./index.html#equipment" class="header__nav-link"  data-translate="header__link2">Оборудование</a>
+                        <a href="./index.html#results" class="header__nav-link" data-translate="header__link3">Результаты</a>
+                        <a href="./index.html#faq" class="header__nav-link" data-translate="header__link4">FAQ</a>
+                    </nav>
+        
+                    <div class="header__group-buttons">
+                        <a href="./orderResearch.html" class="header__button" data-translate="header__button">Заказать исследование</a>
+                        <a href="#" class="header__button header__button-user">
+                            <img src="./img/icons/user-icon.svg" alt="user icon" class="header__button-img">
+                        </a>
+                    </div>
+        
+                    <a href="#" class="header__burger-button">
+                        <div class="header__burger-line"></div>
+                        <div class="header__burger-line"></div>
+                        <div class="header__burger-line"></div>
+                    </a>
+                </div>
+                
+                
+                <div class="header__nav-bottom">
+                    <nav class="header__nav">
+                        <a href="./index.html#services" class="header__nav-link" data-translate="header__link1">Услуги</a>
+                        <a href="./index.html#equipment" class="header__nav-link" data-translate="header__link2">Оборудование</a>
+                        <a href="./index.html#results" class="header__nav-link" data-translate="header__link3">Результаты</a>
+                        <a href="./index.html#faq" class="header__nav-link" data-translate="header__link4">FAQ</a>
+                    </nav>
+                    <div class="header__group-buttons">
+                        <a href="./orderResearch.html" class="header__button" data-translate="header__button">Заказать исследование</a>
+                        <a href="#" class="header__button header__button-user">
+                            <img src="./img/icons/user-icon.svg" alt="user icon" class="header__button-img">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <main class="container">
+        <section class="research">
+            <div class="research__header">
+                <h1 class="research__text">
+                    <p class="section-title" data-translate="research__title1">Заказать</p>
+                    <p class="section-title" data-translate="research__title2">Исследование</p>
+                </h1>
+                <p class="research__pagination research__pagination--active" id="researchPage1" data-translate="step1">Шаг 1 из 3</p>
+                <p class="research__pagination" id="researchPage2" data-translate="step2">Шаг 2 из 3</p>
+                <p class="research__pagination" id="researchPage3" data-translate="step3">Шаг 3 из 3</p>
+            </div>
+
+            <form class="research__form form" action="." name="name" >
+                <div class="research__form__start research__form__start--active">
+                    <div class="research__section research__section--active" id="researchSection2">
+                        <div class="form-section__description">
+                            <p class="form-section__description-counter">1</p>
+                            <p class="form-section__description-title" data-translate="product">Продукт</p>
+                        </div>
+
+                        <div class="form__group">
+                            <div class="form__body">
+                                <div class="multi-select">
+                                    <select name="productSelect" id="productSelect" class="form__input">
+                                        <option value="site" data-translate="site">Сайт</option>
+                                        <option value="mobileApplications" data-translate="mobileAplications">Мобильные приложения</option>
+                                        <option value="advertising" data-translate="advertising">Реклама</option>
+                                        <option value="package" data-translate="package">Упаковка</option>
+                                        <option value="copywriting" data-translate="copywriting">Копирайтинг</option>
+                                        <option value="naming" data-translate="naming">Нейминг</option>
+                                        <option value="branding" data-translate="branding">Брендинг и фирменный стиль</option>
+                                    </select>
+                                    
+                                    <div data-select="site" class="select__items select__items--active">
+                                        <div class="form__group-line form__group-line--active">
+                                            <input type="radio" name="productGood" id="selectItem1" value="Лендинг" checked>
+                                            <label for="selectItem1" data-translate="selectItem1">Лендинг</label>
+                                        </div>
+                                        <div class="form__group-line">
+                                            <input type="radio" name="productGood" id="selectItem2" value="Визитка">
+                                            <label for="selectItem2" data-translate="selectItem2">Визитка</label>
+                                        </div>
+                                        <div class="form__group-line">
+                                            <input type="radio" name="productGood" id="selectItem3" value="Корпоративный">
+                                            <label for="selectItem3" data-translate="selectItem3">Корпоративный</label>
+                                        </div>
+                                        <div class="form__group-line">
+                                            <input type="radio" name="productGood" id="selectItem4" value="Интернет-магазин">
+                                            <label for="selectItem4" data-translate="selectItem4">Интернет-магазин</label>
+                                        </div>
+                                        <div class="form__group-line">
+                                            <input type="radio" name="productGood" id="selectItem5" value="Портал">
+                                            <label for="selectItem5" data-translate="selectItem5">Портал</label>
+                                        </div>
+                                    </div>
+        
+                                    <div data-select="mobileApplications" class="select__items">
+                                        <div class="form__group-line">
+                                            <input type="radio" name="productGood" id="selectItem6" value="Мобильные 1">
+                                            <label for="selectItem6" data-translate="selectItem6">Мобильные 1</label>
+                                        </div>
+                                        <div class="form__group-line">
+                                            <input type="radio" name="productGood" id="selectItem7" value="Мобильные 2">
+                                            <label for="selectItem7" data-translate="selectItem7">Мобильные 2</label>
+                                        </div>
+                                        <div class="form__group-line">
+                                            <input type="radio" name="productGood" id="selectItem8" value="Мобильные 3">
+                                            <label for="selectItem8" data-translate="selectItem8">Мобильные 3</label>
+                                        </div>
+                                        <div class="form__group-line">
+                                            <input type="radio" name="productGood" id="selectItem9" value="Мобильные 4">
+                                            <label for="selectItem9" data-translate="selectItem9">Мобильные 4</label>
+                                        </div>
+                                        <div class="form__group-line">
+                                            <input type="radio" name="productGood" id="selectItem10" value="Мобильные 5">
+                                            <label for="selectItem10" data-translate="selectItem10">Мобильные 5</label>
+                                        </div>
+                                    </div>
+    
+                                    <div data-select="advertising" class="select__items">
+                                        <div class="form__group-line">
+                                            <input type="radio" name="productGood" id="selectItem11" value="Реклама 1">
+                                            <label for="selectItem11" data-translate="selectItem11">Реклама 1</label>
+                                        </div>
+                                        <div class="form__group-line">
+                                            <input type="radio" name="productGood" id="selectItem12" value="Реклама 2">
+                                            <label for="selectItem12" data-translate="selectItem12">Реклама 2</label>
+                                        </div>
+                                        <div class="form__group-line">
+                                            <input type="radio" name="productGood" id="selectItem13" value="Реклама 3">
+                                            <label for="selectItem13" data-translate="selectItem13">Реклама 3</label>
+                                        </div>
+                                        <div class="form__group-line">
+                                            <input type="radio" name="productGood" id="selectItem14" value="Реклама 4">
+                                            <label for="selectItem14" data-translate="selectItem14">Реклама 4</label>
+                                        </div>
+                                        <div class="form__group-line">
+                                            <input type="radio" name="productGood" id="selectItem15" value="Реклама 5">
+                                            <label for="selectItem15" data-translate="selectItem15">Реклама 5</label>
+                                        </div>
+                                    </div>
+    
+                                    <div data-select="package" class="select__items">
+                                        <div class="form__group-line">
+                                            <input type="radio" name="productGood" id="selectItem16" value="Упаковка 1">
+                                            <label for="selectItem16" data-translate="selectItem16">Упаковка 1</label>
+                                        </div>
+                                        <div class="form__group-line">
+                                            <input type="radio" name="productGood" id="selectItem17" value="Упаковка 2">
+                                            <label for="selectItem17" data-translate="selectItem17">Упаковка 2</label>
+                                        </div>
+                                        <div class="form__group-line">
+                                            <input type="radio" name="productGood" id="selectItem18" value="Упаковка 3">
+                                            <label for="selectItem18" data-translate="selectItem18">Упаковка 3</label>
+                                        </div>
+                                        <div class="form__group-line">
+                                            <input type="radio" name="productGood" id="selectItem19" value="Упаковка 4">
+                                            <label for="selectItem19" data-translate="selectItem19">Упаковка 4</label>
+                                        </div>
+                                        <div class="form__group-line">
+                                            <input type="radio" name="productGood" id="selectItem20" value="Упаковка 5">
+                                            <label for="selectItem20" data-translate="selectItem20">Упаковка 5</label>
+                                        </div>
+                                    </div>
+    
+                                    <div data-select="copywriting" class="select__items">
+                                        <div class="form__group-line">
+                                            <input type="radio" name="productGood" id="selectItem21" value="Копирайтинг 1">
+                                            <label for="selectItem21" data-translate="selectItem21">Копирайтинг 1</label>
+                                        </div>
+                                        <div class="form__group-line">
+                                            <input type="radio" name="productGood" id="selectItem22" value="Копирайтинг 2">
+                                            <label for="selectItem22" data-translate="selectItem22">Копирайтинг 2</label>
+                                        </div>
+                                        <div class="form__group-line">
+                                            <input type="radio" name="productGood" id="selectItem23" value="Копирайтинг 3">
+                                            <label for="selectItem23" data-translate="selectItem23">Копирайтинг 3</label>
+                                        </div>
+                                        <div class="form__group-line">
+                                            <input type="radio" name="productGood" id="selectItem24" value="Копирайтинг 4">
+                                            <label for="selectItem24" data-translate="selectItem24">Копирайтинг 4</label>
+                                        </div>
+                                        <div class="form__group-line">
+                                            <input type="radio" name="productGood" id="selectItem25" value="Копирайтинг 5">
+                                            <label for="selectItem25" data-translate="selectItem25">Копирайтинг 5</label>
+                                        </div>
+                                    </div>
+    
+                                    <div data-select="naming" class="select__items">
+                                        <div class="form__group-line">
+                                            <input type="radio" name="productGood" id="selectItem26" value="Нейминг 1">
+                                            <label for="selectItem26" data-translate="selectItem26">Нейминг 1</label>
+                                        </div>
+                                        <div class="form__group-line">
+                                            <input type="radio" name="productGood" id="selectItem27" value="Нейминг 2">
+                                            <label for="selectItem27" data-translate="selectItem27">Нейминг 2</label>
+                                        </div>
+                                        <div class="form__group-line">
+                                            <input type="radio" name="productGood" id="selectItem28" value="Нейминг 3">
+                                            <label for="selectItem28" data-translate="selectItem28">Нейминг 3</label>
+                                        </div>
+                                        <div class="form__group-line">
+                                            <input type="radio" name="productGood" id="selectItem29" value="Нейминг 4">
+                                            <label for="selectItem29" data-translate="selectItem29">Нейминг 4</label>
+                                        </div>
+                                        <div class="form__group-line">
+                                            <input type="radio" name="productGood" id="selectItem30" value="Нейминг 5">
+                                            <label for="selectItem30" data-translate="selectItem30">Нейминг 5</label>
+                                        </div>
+                                    </div>
+    
+                                    <div data-select="branding" class="select__items">
+                                        <div class="form__group-line">
+                                            <input type="radio" name="productGood" id="selectItem31" value="Брендинг и фирменный стиль 1">
+                                            <label for="selectItem31" data-translate="selectItem31">Брендинг и фирменный стиль 1</label>
+                                        </div>
+                                        <div class="form__group-line">
+                                            <input type="radio" name="productGood" id="selectItem32" value="Брендинг и фирменный стиль 2">
+                                            <label for="selectItem32" data-translate="selectItem32">Брендинг и фирменный стиль 2</label>
+                                        </div>
+                                        <div class="form__group-line">
+                                            <input type="radio" name="productGood" id="selectItem33" value="Брендинг и фирменный стиль 3">
+                                            <label for="selectItem33" data-translate="selectItem33">Брендинг и фирменный стиль 3</label>
+                                        </div>
+                                        <div class="form__group-line">
+                                            <input type="radio" name="productGood" id="selectItem34" value="Брендинг и фирменный стиль 4">
+                                            <label for="selectItem34" data-translate="selectItem34">Брендинг и фирменный стиль 4</label>
+                                        </div>
+                                        <div class="form__group-line">
+                                            <input type="radio" name="productGood" id="selectItem35" value="Брендинг и фирменный стиль 5">
+                                            <label for="selectItem35" data-translate="selectItem35">Брендинг и фирменный стиль 5</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form__group-line select__inline">
+                                    <p class="select__inline-caption" data-translate="countPage">
+                                        Количество страниц
+                                    </p>
+                                    <select name="countPage" id="countPage" class="select__inline-items">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+    
+                                <input type="text" name="siteLink" id="formSiteLink" class="form__input" placeholder="Ссылка" required>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="research__section research__section--active" id="researchSection3">
+                        <div class="form-section__description">
+                            <p class="form-section__description-counter">2</p>
+                            <p class="form-section__description-title" data-translate="research__description2">Исследование</p>
+                        </div>
+    
+                        <div class="form__group">
+                            <div class="form__body">
+                                <div class="select">
+                                    <p class="form__select-title" data-translate="aim__research">
+                                        Цель исследования:
+                                    </p>
+                                    <div data-select="aims" class="select__items select__items--active">
+                                        <div class="form__group-line form__group-line--active">
+                                            <input type="radio" name="researchAim" id="researchAim1" value="Лендинг" checked>
+                                            <label for="researchAim1" data-translate="researchAim1">Выбор наилучшей дизайн-концепции</label>
+                                        </div>
+                                        <div class="form__group-line">
+                                            <input type="radio" name="researchAim" id="researchAim2" value="Визитка">
+                                            <label for="researchAim2" data-translate="researchAim2">Дизайн-аудит</label>
+                                        </div>
+                                        <div class="form__group-line">
+                                            <input type="radio" name="researchAim" id="researchAim3" value="Корпоративный">
+                                            <label for="researchAim3" data-translate="researchAim3">Оценка юзабилити</label>
+                                        </div>
+                                        <div class="form__group-line">
+                                            <input type="radio" name="researchAim" id="researchAim4" value="Интернет-магазин">
+                                            <label for="researchAim4" data-translate="researchAim4">Сравнительное А/В тестирование</label>
+                                        </div>
+                                        <div class="form__group-line">
+                                            <input type="radio" name="researchAim" id="researchAim5" value="Портал">
+                                            <label for="researchAim5" data-translate="researchAim5">Другое</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+    
+                                <div class="form__group-line select__inline">
+                                    <p class="select__inline-caption" data-translate="countRespondents">
+                                        Количество респондентов
+                                    </p>
+                                    <select name="countRespondents" id="countRespondents" class="select__inline-items">
+                                        <option value="1">10</option>
+                                        <option value="2">20</option>
+                                        <option value="3">30</option>
+                                        <option value="4">40</option>
+                                        <option value="5">50</option>
+                                    </select>
+                                </div>
+    
+                                <div class="form__group-line select__inline">
+                                    <p class="select__inline-caption" data-translate="ageTarget">
+                                        Возраст целевой аудитории
+                                    </p>
+                                    <select name="AgeTargetAudience" id="AgeTargetAudience" class="select__inline-items">
+                                        <option value="18-25 лет" data-translate="AgeTargetAudience1">18-25 лет</option>
+                                        <option value="18-25 лет" data-translate="AgeTargetAudience2">18-25 лет</option>
+                                        <option value="18-25 лет" data-translate="AgeTargetAudience3">18-25 лет</option>
+                                        <option value="18-25 лет" data-translate="AgeTargetAudience4">18-25 лет</option>
+                                        <option value="18-25 лет" data-translate="AgeTargetAudience5">18-25 лет</option>
+                                    </select>
+                                </div>
+    
+                                <div class="form__group-line select__inline">
+                                    <p class="select__inline-caption" data-translate="biometric">
+                                        Биометрические данные*
+                                    </p>
+                                    <select name="biometricData" id="biometricData" class="select__inline-items">
+                                        <option value="Да" data-translate="biometricData1">Да</option>
+                                        <option value="Нет" data-translate="biometricData2">Нет</option>
+                                    </select>
+                                </div>
+    
+                                <div class="select">
+                                    <p class="form__select-title" data-translate="addService">
+                                        Дополнительные услуги:
+                                    </p>
+                                    <div data-select="additionalServices" class="select__items select__items--active">
+                                        <div class="form__group-line">
+                                            <input type="radio" name="additionalServices" id="additionalServices1" value="Индивидуальный подбор зон интереса">
+                                            <label for="additionalServices1" data-translate="additionalServices1">Индивидуальный подбор зон интереса</label>
+                                        </div>
+                                        <div class="form__group-line">
+                                            <input type="radio" name="additionalServices" id="additionalServices2" value="Разработка сценария исследования">
+                                            <label for="additionalServices2" data-translate="additionalServices2">Разработка сценария исследования</label>
+                                        </div>
+                                        <div class="form__group-line">
+                                            <input type="radio" name="additionalServices" id="additionalServices3" value="UX-тестирование">
+                                            <label for="additionalServices3" data-translate="additionalServices3">UX-тестирование</label>
+                                        </div>
+                                        <div class="form__group-line">
+                                            <input type="radio" name="additionalServices" id="additionalServices4" value="Сбор дополнительных метрик">
+                                            <label for="additionalServices4" data-translate="additionalServices4">Сбор дополнительных метрик</label>
+                                        </div>
+                                        <div class="form__group-line">
+                                            <input type="radio" name="additionalServices" id="additionalServices5" value="Другое">
+                                            <label for="additionalServices5" data-translate="additionalServices5">Другое</label>
+                                        </div>
+                                    </div>
+                                </div>
+    
+    
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="research__section research__section--active" id="researchSection4">
+                        <div class="form-section__description">
+                            <p class="form-section__description-counter">3</p>
+                            <p class="form-section__description-title" data-translate="materials">Материалы</p>
+                        </div>
+    
+                        <div class="form__group form__group--flex">
+                            <div class="form__body">
+                                <input type="url" name="DocumentLink" id="formDocumentLink" class="form__input" placeholder="Ссылка на материал" required>
+                            </div>
+    
+                            <p class="form__input-caption" data-translate="materialsCaption"> 
+                                Загрузите дизайн-макеты, которые нужно протестировать. Если материалов будет недостаточно, мы с вами свяжемся                        
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="research__section research__section--active" id="researchSection5">
+                        <div class="form-section__description">
+                            <p class="form-section__description-counter">4</p>
+                            <p class="form-section__description-title" data-translate="addInfo">Дополнительная информация</p>
+                        </div>
+    
+                        <div class="form__group">
+                            <div class="form__body">
+                                <textarea name="formTextarea" id="formTextarea" class="form__input form__input-textArea" placeholder="Описание">
+    
+                                </textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="research__form__middle">
+                    <div class="research__section  check__form check__form--active" id="researchSection7">
+                        <div class="form-section__description">
+                            <p class="form-section__description-counter">1</p>
+                            <p class="form-section__description-title" data-translate="infoProductTitle1">Информация о продукте</p>
+                        </div>
+    
+                        <div class="form__group">
+                            <div class="form__body">
+                                <div class="check__form-group">
+                                    <p class="check__form-title">
+                                        <span data-check_input="productSelect" class="check__form-group form-group__text" data-translate="">Сайт, </span>
+                                        <span data-check_input="productGood" class="check__form-group form-group__text" data-translate=""> Визитка,</span>
+                                        <span data-check_input="countPage" class="check__form-group form-group__text"> 1 <span data-translate="count_page_info">страница</span></span>
+                                    </p>
+                                    <a href="#" class="check__form__back-link" data-translate="back_link" data-section="researchSection2">Редактировать</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="research__section check__form check__form--active" id="researchSection8">
+                        <div class="form-section__description">
+                            <p class="form-section__description-counter">2</p>
+                            <p class="form-section__description-title" data-translate="infoProductTitle2">Исследование</p>
+                        </div>
+    
+                        <div class="form__group">
+                            <div class="form__body">
+                                <div class="check__form-group">
+                                    <p class="check__form-title">
+                                        <span data-check_input="researchAim" class="check__form-group form-group__text">Выбор наилучшей дизайн-концепции, </span>
+                                        <span data-check_input="countRespondents" class="check__form-group form-group__text">Количество респондентов 10, </span>
+                                        <span data-check_input="AgeTargetAudience" class="check__form-group form-group__text">ЦА: 18-25 лет, </span>
+                                        <span data-check_input="biometricData" class="check__form-group form-group__text">биометрия (да), </span>
+                                        <span data-check_input="additionalServices" class="check__form-group form-group__text">Дополнительные услуги: индивидуальный подбор зон интереса</span>
+                                    </p>
+                                    <a href="#" class="check__form__back-link" data-translate="back_link" data-section="researchSection3">Редактировать</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="research__section check__form check__form--active" id="researchSection9">
+                        <div class="form-section__description">
+                            <p class="form-section__description-counter">3</p>
+                            <p class="form-section__description-title" data-translate="infoProductTitle3">Загрузка материалов</p>
+                        </div>
+    
+                        <div class="form__group">
+                            <div class="form__body">
+                                <div class="check__form-group">
+                                    <p class="check__form-title">
+                                        <a href="#" target="_blank" data-check_input="urlInput" class="check__form-group form-group__text" data-translate="linkMaterials">ссылка на материалы</a>
+                                    </p>
+                                    <a href="#" class="check__form__back-link" data-section="researchSection4" data-translate="back_link">Редактировать</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="total-price check__form total-price--active">
+                        <div class="total-price__group">
+                            <h2 class="total-price__text">
+                                <span data-translate="total_text1">
+                                    ИТОГО: <br>
+                                </span>
+                                <span class="total-price__text-rubles" data-translate="total_text2">
+                                    10 000 руб.
+                                </span>
+                            </h2>
+                            <p class="total-price__caption" data-translate="total_price-caption">
+                                Срок реализации – 5 рабочих дней с момента оплаты
+                                <br>
+                                Комментарии к заказу?
+                            </p>
+                        </div>
+
+                        <div class="total-price__group">
+                            <a href="#" class="button-next total-price__button" id="buttonNextUser" data-translate="buttonNextUser">Следующий шаг</a>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="research__form__finish">
+
+                    <div class="research__section research__section--active" id="researchSection1">
+                        <div class="form-section__description">
+                            <p class="form-section__description-counter">5</p>
+                            <p class="form-section__description-title" data-translate="personalData">Личные данные</p>
+                        </div>
+    
+                        <div class="form__group">
+                            <div class="form__header">
+                                <input type="text" name="nameCustomer" id="nameCustomer" class="form__input" placeholder="Иван Иванов">
+                                <div class="form__header__group">
+                                    <div class="form__group-line form__group-line--active">
+                                        <input type="radio"  value="Дизайнер" name="customer" id="customerDesigner" class="form__input__customer select-radio" checked>
+                                        <label for="customerDesigner" data-select="disigner" data-translate="disigner">Дизайнер</label>
+                                    </div>
+                                    <div class="form__group-line">
+                                        <input type="radio" value="Компания" name="customer" id="customerCompany" class="form__input__customer">
+                                        <label for="customerCompany" data-section="company" data-translate="company">Компания</label>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <div class="form__body">
+                                <input type="email" name="email" id="formEmail" class="form__input" placeholder="ivanov@mail.com" required>
+                                <input type="tel" name="tel" id="formTel" class="form__input" placeholder="+7 (900) 900-90-90" required>
+                                <input type="password" name="password1" class="form__input" id="formPassword1" placeholder="Пароль для личного кабинет" required>
+                                <input type="password" name="password2" class="form__input" id="formPassword2" placeholder="Повторите пароль" required>
+                                <div class="form__group-line form__group__checkbox">
+                                    <input type="checkbox" class="form__checkbox" name="userAgreement" id="formUserAgreement" required>
+                                    <label for="formUserAgreement">
+                                        <p>
+                                            <span data-translate="user-agreement">Я принимаю условия</span>
+                                            <a href="#" class="user-agreement-link" data-translate="userAgrement">Пользовательского соглашения</a>
+                                        </p>
+                                    </label>
+                                </div>
+                                <div class="form__group-line form__group__checkbox">
+                                    <input type="checkbox" class="form__checkbox" name="privacyPolicy" id="formPrivacyPolicy" required>
+                                    <label for="formPrivacyPolicy">
+                                        <p>
+                                            <span data-translate="terms-personal">Я подтверждаю согласие с </span>
+                                            <a href="#" class="privacy-policy-link" data-translate="termsPersonal">Условиями обработки персональных данных</a>
+                                        </p>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <a href="#" class="button-next" id="buttonNext" data-translate="button_next" disabled>Рассчитать стоимость</a>
+        </section>
+    </main>
+
+    <footer class="footer container">
+        <div class="footer__content">
+            <div class="footer__info">
+                <div class="footer__info-group">
+                    <p class="footer__info-title" data-translate="footer__info-title1">Адрес</p>
+                    <a href="#" class="footer__info-link">
+                        <p class="footer__info-address" data-translate="footer__info-address">Улица  Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
+                        <p class="footer__info-city" data-translate="footer__info-city">г. Санкт-Пететбург</p>
+                    </a>
+                </div>
+                <div class="footer__info-group">
+                    <p class="footer__info-title" data-translate="footer__info-title2">Телефон</p>
+                    <a href="tel: 8 800 800 80 80" class="footer__info-link">
+                        <p class="footer__info-phone">8 800 800 80 80</p>
+                    </a>
+                </div>
+                <div class="footer__info-group">
+                    <p class="footer__info-title" data-translate="footer__info-title3">Почта</p>
+                    <a href="mailTo:info@braisale.com" class="footer__info-link">
+                        <p class="footer__info-email">info@braisale.com</p>
+                    </a>
+                </div>
+            </div>
+            <div class="footer__actions">
+                <div class="footer__socials">
+                    <p class="footer__socials-title" data-translate="footer__socials-title">Соцсети</p>
+                    <div class="footer__socials-group">
+                        <a href="#" class="footer__social-link">
+                            <img src="./img/socials/vk-icon.svg" alt="vk social icon" class="footer__social-img">
+                        </a>
+                        <a href="#" class="footer__social-link">
+                            <img src="./img/socials/telegram-icon.svg" alt="telegram social icon" class="footer__social-img">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- TODO Нужно что-то сделать с кнопкой языка возможно не через select -->
+                <select name="language" id="selectLanguage" class="footer__select-language">
+                    <option class="footer__option-language" value="ru">
+                        Русский
+                    </option>
+                    <option class="footer__option-language" value="en">English</option>
+                </select>
+            </div>
+            
+        </div>
+        <div class="footer__content--tablet">
+            <div class="footer__content-left">
+                <div class="footer__info-group">
+                    <p class="footer__info-title" data-translate="footer__info-title1">Адрес</p>
+                    <a href="#" class="footer__info-link">
+                        <p class="footer__info-address" data-translate="footer__info-address">Улица  Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
+                        <p class="footer__info-city" data-translate="footer__info-city">г. Санкт-Пететбург</p>
+                    </a>
+                </div>
+                <div class="footer__info-group">
+                    <p class="footer__info-title" data-translate="footer__info-title2">Телефон</p>
+                    <a href="tel: 8 800 800 80 80" class="footer__info-link">
+                        <p class="footer__info-phone">8 800 800 80 80</p>
+                    </a>
+                </div>
+            </div>
+            <div class="footer__content-right">
+                <div class="footer__info-group">
+                    <p class="footer__info-title" data-translate="footer__info-title3">Почта</p>
+                    <a href="mailTo:info@braisale.com" class="footer__info-link">
+                        <p class="footer__info-email" data-translate="">info@braisale.com</p>
+                    </a>
+                </div>
+
+                <div class="footer__actions">
+                    <div class="footer__socials">
+                        <p class="footer__socials-title" data-translate="footer__socials-title">Соцсети</p>
+                        <div class="footer__socials-group">
+                            <a href="#" class="footer__social-link">
+                                <img src="./img/socials/vk-icon.svg" alt="vk social icon" class="footer__social-img">
+                            </a>
+                            <a href="#" class="footer__social-link">
+                                <img src="./img/socials/telegram-icon.svg" alt="telegram social icon" class="footer__social-img">
+                            </a>
+                        </div>
+                    </div>
+    
+                    <!-- TODO Нужно что-то сделать с кнопкой языка возможно не через select -->
+                    <select name="language" id="selectLanguageMobile" class="footer__select-language">
+                        <option class="footer__option-language" value="ru">
+                            Русский
+                        </option>
+                        <option class="footer__option-language" value="en">
+                            English
+                        </option>
+                    </select>
+                </div>
+            </div>
+            
+        </div>
+        <p class="footer__copyright">
+            © 2024 brainsale. All Rights Reserved.
+        </p>
+    </footer>
+
+    
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="module" src="./js/main.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,26 @@
+.services{
+    padding-top: 70px;
+    padding-bottom: 70px;
+    border-top: 1px solid var(--color-primary);
+    border-bottom: 1px solid var(--color-primary);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.services__title{
+    margin-bottom: 30px;
+}
+
+.services__subtitle{
+    margin-bottom: 30px;
+}
+
+.services__text{
+    max-width: 456px;
+}
+
+.services__img--mobile{
+    display: none;
+}
