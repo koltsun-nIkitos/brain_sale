@@ -334,6 +334,9 @@ export const translater = () => {
         // При загрузке страницы
         const currentLang = localStorage.getItem('language') || 'ru'; // Загрузить текущий язык
         changeLanguage(currentLang);
+
+        // Установка выбранного значения select
+        langSelect.value = currentLang;
     
         // Изменение языка по выбору в select
         langSelect.addEventListener('change', (event) => {

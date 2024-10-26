@@ -346,6 +346,9 @@ export const research = () =>{
                 tel : formTel.value,
             }
 
+            // Показываем прелоадер перед вызовом API
+            document.getElementById('preloader').classList.add('preloader--active');
+
             emailjs.send('service_350hrsv', 'template_uyfappl',{
                 from_name : "Brain_sale",
                 name : order.name,
@@ -369,9 +372,14 @@ export const research = () =>{
 
             }, 'jIcF5DlDMnXr3bd4K')
             .then((response) => {
+                // Скрываем прелоадер и открываем модальное окно при успешной отправке
+                document.getElementById('preloader').classList.remove('preloader--active');
                 openModal();
             }, (error) => {
-                
+                // Скрываем прелоадер и выводим сообщение об ошибке при неудачной отправке
+                document.getElementById('preloader').classList.remove('preloader--active');
+                console.error('Ошибка при отправке:', error);
+                alert("Произошла ошибка. Пожалуйста, попробуйте снова.");
             });
         })
 

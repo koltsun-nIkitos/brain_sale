@@ -4,9 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="icon" href="./img/favicon.svg" type="image/svg+xml">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Brain Sale" />
+    <meta property="og:description" content="Лаборатория нейромаркетинга" />
+    <meta property="og:image" content="./img/preview_local.png" />
+    <meta property="og:url" content="https://koltsun-nikitos.github.io/brain_sale/" />
+    <meta property="og:type" content="website" />
+
+    <!-- VK -->
+    <meta property="vk:title" content="Brain Sale" />
+    <meta property="vk:description" content="Лаборатория нейромаркетинга" />
+    <meta property="vk:image" content="./img/vk-link-preview.png" />
+
+    <!-- Метатеги для Telegram -->
+    <meta name="telegram:card" content="summary_large_image" />
+    <meta name="telegram:title" content="Brain Sale" />
+    <meta name="telegram:description" content="Лаборатория нейромаркетинга" />
+    <meta name="telegram:image" content="./img/tg-link-preview.png" />
+
     <title>Brain.Sale - форма исследования</title>
 </head>
 <body>
+    <div class="modal-overlay" id="modalOverlay"></div>
+    <div class="preloader" id="preloader"></div>
     <div class="modal" id="modalPopup">
         <div class="modal__body">
             <a href="#" class="modal-close">

@@ -1,33 +1,27 @@
 
-export const openModal = ()=>{
+export const openModal = () => {
     const modal = document.getElementById('modalPopup');
+    const overlay = document.getElementById('modalOverlay');
     const modalBody = modal.querySelector('.modal__body');
     const closeModalButton = modal.querySelector('.modal-close');
 
-    // Открытие модального окна
+    // Показываем popup и overlay
     modal.classList.add('modal--active');
-    modal.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-    });
+    overlay.classList.add('modal-overlay--active');
 
     // Обработчик клика
+    const closeModal = () => {
+        modal.classList.remove('modal--active');
+        overlay.classList.remove('modal-overlay--active');
+    };
+
+    overlay.addEventListener('click', closeModal);
+    closeModalButton.addEventListener('click', closeModal);
+
+    // Закрытие при клике вне 
     modal.addEventListener('click', (evt) => {
-        const target = evt.target;
-
-        // Закрытие при клике на крестик
-        if (target === closeModalButton || target.closest('.modal-close')) {
-            closeModal();
-        }
-
-        // Закрытие при клике вне modal__body
-        if (!modalBody.contains(target)) {
+        if (!modalBody.contains(evt.target)) {
             closeModal();
         }
     });
-
-    // Функция для закрытия модального окна
-    const closeModal = () => {
-        modal.classList.remove('modal--active');
-    };
-}
+};
