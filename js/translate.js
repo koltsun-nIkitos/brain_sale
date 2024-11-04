@@ -315,9 +315,6 @@ const translations = {
 
 
 export const translater = () => {
-
-        console.log('load')
-        
         const langSelect = document.getElementById('selectLanguage');
 
         // Функция для изменения языка
