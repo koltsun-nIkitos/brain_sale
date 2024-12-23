@@ -45,3 +45,151 @@
 .promo__text{
     max-width: 327px;
 }
+
+/* Адаптив */
+
+
+@media (max-width: 1110px) {
+    .promo {
+        background-size: 685px;
+        background-position-y: 0;
+        background-position-x: 145%;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    /* promo */
+    .promo {
+        background-size: 685px;
+        background-position-y: 0;
+        background-position-x: 145%;
+        padding-bottom: 171px;
+    }
+    .promo__content{
+        padding-bottom: 100px;
+    }
+
+    .promo__title span {
+        font-size: 98px;
+        margin-bottom: 6px;
+    }
+    .promo__title span:last-child{
+        text-align-last: left;
+        margin-left: 20%;
+    }
+    .promo__text{
+        line-height: 1.2;
+    }
+}
+
+@media(max-width: 980px){
+    .promo__title span[data-translate="promo__title1"]  {
+        margin-left: 24px;
+    }
+}
+
+@media(max-width: 850px){
+    .promo{
+        background-size: 600px;
+    }
+}
+
+@media (max-width: 769px) {
+
+    .promo{
+        padding-top: 60px;
+        background-size: 422px;
+        background-position-x: 90%;
+    }
+    .promo__content{
+        padding-bottom: 0;
+    }
+    .promo__title{
+        padding-top: 60px;
+    }
+    .promo__title span {
+        font-size: 56px;
+        line-height: 0.92;
+    }
+    .promo__title span:last-child{
+        margin-left: 17%;
+        margin-bottom: 70px;
+    }
+    .promo__group {
+        margin-left: 120px;
+    }
+    .promo__text{
+        max-width: 243px;
+    }
+}
+
+@media (max-width: 650px) {
+    .promo{
+        background-position-x: 125%;
+    }
+}
+
+@media (max-width: 560px) {
+    .promo{
+        background-position-x: 180%;
+    }
+}
+
+@media (max-width: 510px) {
+    .promo{
+        background-position-x: 250%;
+    }
+}
+
+@media (max-width: 480px) {
+    .promo{
+        background-position-x: 450%;
+    }
+}
+
+@media (max-width: 450px) {
+    .promo{
+        background-position-x: 200%;
+        background-size: 350px;
+    }
+    
+}
+
+@media (max-width: 426px) {
+    .promo{
+        background-image: none;
+        padding-bottom: 141px;
+    }
+    .promo__title span[data-translate="promo__title1"]{
+        margin-left: 0;
+    }
+    .promo__title span:last-child {
+        margin-left: 0;
+    }
+    .promo__group{
+        margin-left: 65px;
+    }
+
+
+}
+
+@media (max-width: 376px) {
+    .promo__title{
+        margin-left: 15px;
+    }
+    
+}
+
+@media (max-width: 335px) {
+    .promo__title span {
+        font-size: 52px;
+        margin-left: 7px;
+    }
+}
+
+@media (max-width: 321px) {
+    .promo{
+        padding-bottom: 100px;
+    }
+}

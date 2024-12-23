@@ -120,7 +120,7 @@
 
 .header__nav-bottom .header__nav-link{
     margin-right: 0;
-    margin-bottom: 70px;
+    margin-bottom: 50px;
     font-size: 20px;
 }
 
@@ -136,4 +136,99 @@
 /* not use */
 .header__button-user{
     display: none;
+}
+
+
+
+/* адаптив */
+
+@media (max-width: 1410px) {
+    .header .container{
+        width: 95%;
+    }
+    .header__nav{
+        margin-right: 120px;
+    }
+}
+
+@media (max-width: 1050px){
+    .header__nav{
+        margin-right: 75px;
+    }
+    
+}
+
+
+@media (max-width: 1024px) {
+    .header__nav-container{
+        align-items: flex-end;
+    }
+
+    .header__nav-top .header__nav{
+        display: none;
+    }
+
+    .header__nav-top .header__button-user{
+        display: none;
+    }
+
+    .header__burger-button{
+        display: flex;
+    }
+    /* header */
+    .header__nav {
+        margin-right: 50px;
+    }
+}
+
+
+@media (max-width: 600px){
+    .header__burger-button{
+        margin-left: 25px;
+    }
+}
+
+
+@media (max-width: 450px) {
+    .header__nav-top .header__group-buttons{
+        display: none;
+    }
+    .header__nav-top{
+        min-height: 44px;
+    }
+    .header__nav-bottom .header__nav{
+        padding-top: 65px;
+    }
+
+    .header__nav-bottom--active .header__group-buttons{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .header__nav-bottom .header__nav-link{
+        margin-bottom: 50px;
+    }
+    .header__nav-bottom  .header__button{
+        max-width: 215px;
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 426px) {
+    .header__container{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .header{
+        padding-top: 30px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .header .container{
+        align-items: center;
+    }
+
+    .header__nav-container{
+        height: 100%;
+    }
 }

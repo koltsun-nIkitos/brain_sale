@@ -299,7 +299,7 @@
                                     </select>
                                 </div>
     
-                                <input type="text" name="siteLink" id="formSiteLink" class="form__input" placeholder="Ссылка" required>
+                                <input type="text" name="siteLink" id="formSiteLink" class="form__input" data-translate="placeholder_link" placeholder="Ссылка" required>
                             </div>
                         </div>
                     </div>
@@ -418,7 +418,7 @@
     
                         <div class="form__group form__group--flex">
                             <div class="form__body">
-                                <input type="url" name="DocumentLink" id="formDocumentLink" class="form__input" placeholder="Ссылка на материал" required>
+                                <input type="url" name="DocumentLink" id="formDocumentLink" class="form__input" placeholder="Ссылка на материал" data-translate="placeholder_link_material" required>
                             </div>
     
                             <p class="form__input-caption" data-translate="materialsCaption"> 
@@ -435,7 +435,7 @@
     
                         <div class="form__group">
                             <div class="form__body">
-                                <textarea name="formTextarea" id="formTextarea" class="form__input form__input-textArea" placeholder="Описание">
+                                <textarea name="formTextarea" id="formTextarea" class="form__input form__input-textArea" placeholder="Описание" data-translate="placeholder_description">
     
                                 </textarea>
                             </div>
@@ -539,7 +539,7 @@
     
                         <div class="form__group">
                             <div class="form__header">
-                                <input type="text" name="nameCustomer" id="nameCustomer" class="form__input" placeholder="Иван Иванов">
+                                <input type="text" name="nameCustomer" id="nameCustomer" class="form__input" placeholder="Иван Иванов" data-translate="placeholder_name">
                                 <div class="form__header__group">
                                     <div class="form__group-line form__group-line--active">
                                         <input type="radio"  value="Дизайнер" name="customer" id="customerDesigner" class="form__input__customer select-radio" checked>
@@ -553,7 +553,7 @@
                             </div>
             
                             <div class="form__body">
-                                <input type="email" name="email" id="formEmail" class="form__input" placeholder="ivanov@mail.com" required>
+                                <input type="email" name="email" id="formEmail" class="form__input" placeholder="ivanov@mail.com" data-translate="placeholder_email" required>
                                 <input type="tel" name="tel" id="formTel" class="form__input" placeholder="+7 (900) 900-90-90" required>
                                 <input type="password" name="password1" class="form__input" id="formPassword1" placeholder="Пароль для личного кабинет" required>
                                 <input type="password" name="password2" class="form__input" id="formPassword2" placeholder="Повторите пароль" required>
@@ -621,16 +621,21 @@
                     </div>
                 </div>
 
-                <!-- TODO Нужно что-то сделать с кнопкой языка возможно не через select -->
-                <select name="language" id="selectLanguage" class="footer__select-language">
-                    <option class="footer__option-language" value="ru">
-                        Русский
-                    </option>
-                    <option class="footer__option-language" value="en">English</option>
-                </select>
+
+                <div class="custom-select" id="selectLanguage">
+                    <div class="select-header">
+                        <span class="select-current">Русский</span>
+                        <img  class="select-icon" src="./img/arrow-down-triangle.svg" alt="">
+                    </div>
+                    <ul class="select-list">
+                        <li class="select-item">Русский</li>
+                        <li class="select-item">English</li>
+                    </ul>
+                </div>
             </div>
-            
         </div>
+
+
         <div class="footer__content--tablet">
             <div class="footer__content-left">
                 <div class="footer__info-group">
@@ -668,15 +673,19 @@
                         </div>
                     </div>
     
-                    <!-- TODO Нужно что-то сделать с кнопкой языка возможно не через select -->
-                    <select name="language" id="selectLanguageMobile" class="footer__select-language">
-                        <option class="footer__option-language" value="ru">
-                            Русский
-                        </option>
-                        <option class="footer__option-language" value="en">
-                            English
-                        </option>
-                    </select>
+
+                    <div class="custom-select" id="selectLanguageMobile">
+                        <div class="select-header">
+                            <span class="select-current">Русский</span>
+                            <img  class="select-icon" src="./img/arrow-down-triangle.svg" alt="">
+                        </div>
+                        <ul class="select-list">
+                            <li class="select-item">Русский</li>
+                            <li class="select-item">English</li>
+                        </ul>
+                    </div>
+
+                    
                 </div>
             </div>
             
@@ -684,7 +693,7 @@
         <p class="footer__copyright">
             © 2024 brainsale. All Rights Reserved.
         </p>
-    </footer>
+    </footer> 
 
     
 

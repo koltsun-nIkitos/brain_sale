@@ -20,6 +20,8 @@
 
 @import url('./conscription.css');
 
+@import url('./selects.css');
+
 @import url('./footer.css');
 
 /* Others pages
@@ -34,3 +36,6 @@
 
 /* modal */
 @import url('./modal.css');
+
+/* selects */
+@import url('./selects.css');

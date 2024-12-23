@@ -1,7 +1,7 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+
     margin: 0;
     padding: 0;
 }
@@ -21,11 +21,16 @@ body {
     background-color: var(--color-background);
     font-family: 'Noah', sans-serif;
     color: var(--color-text);
+    overflow-x: hidden;
 }
 
 .container {
     max-width: 1400px;
     margin: 0 auto; 
+}
+
+main{
+    overflow-x: hidden;
 }
 
 .promo__text,

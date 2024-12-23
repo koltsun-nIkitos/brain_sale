@@ -1,5 +1,3 @@
-// smoothScroll.js
-
 export const smoothScrolling = () => {
     // Функция плавного скролла
     function smoothScroll(targetId) {
@@ -13,7 +11,7 @@ export const smoothScrolling = () => {
         }
     }
 
-    // Обработчики для ссылок в шапке
+    // Обработчики для ссылок в шапке комппьютерная версия
     document.querySelectorAll('.header__nav-link').forEach(link => {
         link.addEventListener('click', function (event) {
             event.preventDefault(); // Предотвращаем стандартный переход
@@ -32,6 +30,8 @@ export const smoothScrolling = () => {
             }
         });
     });
+
+    
 
     // При полной загрузке страницы проверяем, есть ли якорь
     window.addEventListener('load', () => {

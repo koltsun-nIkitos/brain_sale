@@ -7,6 +7,12 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    max-width: 95%;
+
+}
+
+.services__content{
+
 }
 
 .services__title{
@@ -21,6 +27,111 @@
     max-width: 456px;
 }
 
+.service__img-block{
+    background-image: url('../img/service-img.svg');
+    width: 585px;
+    height: 375px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+}
+
 .services__img--mobile{
     display: none;
+}
+
+@media (max-width: 1441px) {
+    .services{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .service__img-block{
+        
+    }
+}
+
+@media (max-width: 1115px) {
+    .services__title{
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 1024px) {
+     /* services */
+    .services{
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .services__title{
+        font-size: 36px;
+    }
+    .services__subtitle {
+        font-size: 40px
+    }
+
+    .services__img{
+        /* max-width: 518px; */
+        margin-top: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .services__title{
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+    .services__subtitle{
+        font-size: 36px;
+        line-height: 0.8;
+        margin-bottom: 20px;
+    }
+    
+}
+
+@media (max-width: 640px) {
+    .services{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .services__img--mobile{
+        display: block;
+        max-width: 387px;
+        min-height: 300px;
+        margin-bottom: 40px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .services__text{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .service__img-block{
+        display: none;
+    }
+}
+
+@media (max-width: 426px) {
+    .services{
+        display: flex;
+        flex-direction: column;
+    }
+    .services__img--mobile{
+        display: block;
+        max-width: 343px;
+        min-height: 264px;
+        margin-bottom: 40px;
+    }
+    .services__img{
+        display: none;
+    }
+}
+
+@media (max-width: 375px) {
+    .services{
+        width: 90%;
+    }
 }

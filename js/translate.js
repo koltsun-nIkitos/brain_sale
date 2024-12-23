@@ -10,7 +10,7 @@ const translations = {
         'header__button': 'Заказать исследование',
         'promo__title1' : 'нейро',
         'promo__title2' : 'marketing',
-        'promo__text' : 'метод измерения физиологических и нейронных сигналов у пользователей для&nbsp;понимания их мотивации и предпочтений',
+        'promo__text' : 'метод измерения физиологических и нейронных сигналов у пользователей для&nbsp;понимания мотивации и предпочтений',
         'about__title' : 'О нас',
         'about__subtitle' : 'BRAIN SALE – нейромаркетинговая лаборатория, изучающая эмоциональные и поведенческие реакции человека на коммерческие продукты.',
         'about__text' : 'Мы проводим UX-тестирования, используем айтрекинг и биометрию для достижения желаемых целей в рекламе, продажах и продвижении вашего продукта.',
@@ -151,7 +151,16 @@ const translations = {
         'userAgrement' : 'Пользовательского соглашения',
         'terms-personal' : 'Я подтверждаю согласие с ',
         'termsPersonal' : 'Условиями обработки персональных данных',
-        'button_next2' : 'Заказать исследование'
+        'button_next2' : 'Заказать исследование',
+        'biometric_info' : 'Биометрия',
+        'addservisec_info' : 'Дополнительные услуги',
+        'placeholder_link' : 'Ссылка',
+        'placeholder_link_material' : 'Ссылка на материал',
+        'placeholder_description' : 'Описание',
+        'placeholder_name' : 'Иван Иванов',
+        'placeholder_email' : 'ivanov@mail.com',
+
+
         // ...
     },
 
@@ -306,7 +315,15 @@ const translations = {
         'userAgrement' : 'User Agreement',
         'terms-personal' : 'I confirm my agreement with ',
         'termsPersonal' : 'Terms of personal data processing',
-        'button_next2' : 'Order research'
+        'button_next2' : 'Order research',
+        'biometric_info' : 'Biometrics',
+        'addservisec_info' : 'Additional services',
+        'placeholder_link' : 'Link',
+        'placeholder_link_material' : 'Link to the material',
+        'placeholder_description' : 'Description',
+        'placeholder_name' : 'James Smith',
+        'placeholder_email' : 'smith@gmail.com',
+
         // ...
     }
 };
@@ -322,8 +339,12 @@ export const translater = () => {
             const elementsToTranslate = document.querySelectorAll('[data-translate]');
             elementsToTranslate.forEach((element) => {
                 const translateKey = element.getAttribute('data-translate');
-                if (translations[lang][translateKey]) {
+                if (translations[lang][translateKey] && !element.hasAttribute('placeholder')) {
                     element.innerHTML = translations[lang][translateKey];
+                }else if (element.hasAttribute('placeholder') && translations[lang][translateKey]){
+                    // Элементы с placeholder
+                    element.setAttribute('placeholder', translations[lang][translateKey]);
+                    console.log("hehe");
                 }
             });
         };

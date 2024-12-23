@@ -39,3 +39,118 @@
     width: 100%;
     height: 100%;
 }
+/* 
+.equipment__content{
+    display: flex;
+    flex-direction: column;
+} */
+
+
+.equipment__text{
+    font-size: 18px;
+}
+/* .equipment__text:first-child{
+    display: none;
+} */
+/* .equipment__text:last-child{
+    display: block;
+    margin-top: 40px;
+} */
+
+
+@media (max-width: 1440px) {
+    .equipment{
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 1024px) {
+    /* equipment */
+    .equipment {
+        padding-top: 100px;
+        padding-bottom: 0;
+    }
+    .equipment__header{
+        margin-bottom: 40px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .equipment__title{
+        margin-bottom: 20px;
+        font-size: 36px;
+    }
+    .equipment__subtitle {
+        font-size: 36px;
+    }
+    .equipment__img{
+        max-width: 420px;
+    }
+}
+
+@media (max-height: 960px) {
+    .equipment__img{
+        max-width: 30%;
+    }
+    .equipment__text:first-child{
+        display: block;
+    } 
+}
+
+@media (max-width: 768px) {
+    .equipment{
+        padding-top: 81px;
+    }
+    .equipment__title{
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+    .equipment__subtitle{
+        font-size: 32px;
+    }
+    .equipment__text{
+        font-size: 16px;
+    }
+    .equipment__text:first-child{
+        display: block;
+    } 
+    
+}
+
+@media (max-width: 760px) {
+    .equipment__img{
+        max-width: 35%;
+    }
+    .equipment__img:last-child{
+        max-width: 20%;
+    }
+    .equipment__text:last-child{
+        display: block;
+    }
+    .equipment__text:first-child{
+        display: block;
+    }
+}
+
+
+@media (max-width: 650px) {
+    .equipment__img{
+        max-width: 50%;
+    }
+    .equipment__text:first-child{
+        display: none;
+    }
+}
+
+@media (max-width: 426px) {
+    .equipment{
+        width: 90%;
+    }
+    .equipment__content{
+        flex-direction: column;
+    }
+    .equipment__img{
+        max-width: 80%;
+    }
+}

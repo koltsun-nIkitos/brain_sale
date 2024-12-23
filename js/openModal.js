@@ -13,6 +13,8 @@ export const openModal = () => {
     const closeModal = () => {
         modal.classList.remove('modal--active');
         overlay.classList.remove('modal-overlay--active');
+        // Перезагрузка (очищение страницы)
+        setTimeout(location.reload(), 1000);
     };
 
     overlay.addEventListener('click', closeModal);

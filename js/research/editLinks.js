@@ -1,9 +1,4 @@
-export const activateEdit = (link, formStart, formMiddle, button) =>{
-    // Закрываем вторую часть формы
-    formMiddle.classList.remove('research__form__middle--active');
-
-    // Открываем первую часть формы
-    formStart.classList.add('research__form__start--active');
+export const activateEdit = (link, button) =>{
     button.style.display = "inline-block";
 
     // Получаем секцию для скролла
