@@ -8,7 +8,7 @@ import { FormValidator } from "./research/formValidator.js";
 import { changePagination } from "./research/changePagination.js";
 import { transferAnotherForm } from "./research/transferAnotherForm.js";
 
-export const research = () =>{
+const research = () =>{
     const inputFields = document.querySelectorAll('.form__input, .form__input__textArea');
     const textAreas = document.querySelectorAll('.form__input-textArea');
     const totalPriceButton = document.getElementById('buttonNext');
@@ -117,3 +117,5 @@ export const research = () =>{
     userAgreement.addEventListener('change', formValidator.checkUserForm);
     privacyPolicy.addEventListener('change', formValidator.checkUserForm);
 }
+
+research();

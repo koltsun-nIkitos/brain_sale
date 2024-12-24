@@ -1,16 +1,64 @@
 /* адаптив главная */
 
+@media (max-width:1440px) {
+    
+    .research__header{
+        max-width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .research__form{
+        max-width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .form-group{
+        width: 70%;
+    }
+    .form-section__description{
+        max-width: 455px;
+    }
+}
 
+@media (max-width: 1190px) {
+    .form__group {
+        min-width: 725px;
+    }
+    .form__group--flex{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 1100px) {
+    .form__group {
+        min-width: 625px;
+    }
+    .form__header{
+
+    }
+}
 
 @media (max-width: 1024px) {
     .container{
         max-width: 976px;
     }
+    .research__form {
+        max-width: 85%;
+    }
+    .button-next--disabled{
+        max-width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
 }
 
 
-
+@media (max-width: 590px) {
+    .research__form__start .form__input {
+        min-width: 250px;
+    }
+}
 
 
 
@@ -28,11 +76,23 @@
         margin-left: auto;
         margin-right: auto;
     }
+    .total-price{
+        max-width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
+    .total-price__text {
+        min-width: 425px;
+    }
     
 }
 
-
+@media (max-width: 350px) {
+    .research__form__start .form__input {
+        min-width: 200px;
+    }
+}
 
 /* адаптив research */
 
@@ -102,9 +162,6 @@
     .research__form__start .form__body{
         max-width: 348px;
     }
-    .research__form__start .form__input{
-        min-width: 348px;
-    }
     .research__form__start .select__inline-caption{
         max-width: 218px;
     }
@@ -113,6 +170,17 @@
     }
     .research__form__finish .form__group__checkbox{
         max-width: 343px;
+    }
+    
+
+}
+
+@media (max-width: 720px){
+    .research__form__finish .form__header{
+        flex-direction: column;
+    }
+    .research__form__finish .form__header__group{
+        margin-bottom: 50px;
     }
 }
 
@@ -128,14 +196,27 @@
     .total-price{
         flex-direction: column;
     }
-    .total-price__text{
+    /* .total-price__text{
         min-width: 354px
-    }
+    } */
     .total-price__caption{
         margin-bottom: 60px;
     }
     .research__form__finish .form__header{
         flex-direction: column;
         margin-bottom: 50px;
+    }
+    .total-price__group{
+        max-width: 354px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .total-price__text{
+        flex-direction: column;
+        display: flex;
+        min-width: 1px;
+    }
+    .research__form__finish .form__input {
+        min-width: 290px;
     }
 }
