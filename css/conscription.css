@@ -17,7 +17,15 @@
 .conscription__text{
     display: flex;
     flex-direction: column;
-    
+    line-height: 0.922;
+}
+
+.conscription__subtitle{
+    color: #6780FF;
+    font-size: 32px;
+    text-transform: uppercase;
+    margin-bottom: 17px;
+    font-weight: 400;
 }
 
 .conscription__title{
@@ -69,6 +77,7 @@
     }
     .conscription__link{
         max-width: 392px;
+        align-items: center;
     }
     .conscription__text{
         max-width: 331px;

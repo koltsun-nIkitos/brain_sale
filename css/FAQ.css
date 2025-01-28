@@ -98,6 +98,7 @@
     width: 100%;
     max-width: 928px;
     border-top: 1px solid #7373ff;
+    margin-top: 31px;
 }
 
 .accordion-item {
@@ -139,6 +140,10 @@
 
 .accordion-content p {
     margin: 15px 0;
+}
+
+.accordion-title{
+    font-weight: 400;
 }
 
 .accordion-item.active .accordion-content {

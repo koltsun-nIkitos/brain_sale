@@ -164,6 +164,11 @@
         align-items: flex-end;
     }
 
+    .header__logo-img{
+        max-width: 132px;
+        max-height: 40px;
+    }
+
     .header__nav-top .header__nav{
         display: none;
     }
@@ -230,5 +235,14 @@
 
     .header__nav-container{
         height: 100%;
+    }
+}
+
+@media (max-width: 376px) {
+    .header__logo {
+        margin-top: 0;
+        width: 132px;
+        height: 40px;
+        margin-bottom: 0;
     }
 }

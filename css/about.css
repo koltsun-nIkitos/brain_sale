@@ -25,13 +25,19 @@
     line-height: 1.2;
     margin-bottom: 40px;
     opacity: 0.98;
+    font-weight: 400;
 }
+
 
 .about__text{
     max-width: 448px;
     margin: 0 238px 0 auto;
     font-size: 18px;
     line-height: 1.4;
+}
+
+.about__text span{
+    text-decoration: underline;
 }
 
 .areas-work{
@@ -51,6 +57,12 @@
     text-align: justify;
     margin-right: 42px;
     font-size: 24px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.areas-work__subtitle span{
+    font-style: italic;
 }
 
 .areas-work__list{

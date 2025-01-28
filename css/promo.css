@@ -16,6 +16,7 @@
 .promo__title{
     display: flex;
     flex-direction: column;
+    font-weight: 400;
 }
 
 .promo__title span{
@@ -99,14 +100,16 @@
 
     .promo{
         padding-top: 60px;
-        background-size: 422px;
-        background-position-x: 90%;
+        background-position-x: 105%;
+        background-image: url('../img/promo-img.svg');
+        background-size: 432px 356px;
+        background-position: 99% 25%;
     }
     .promo__content{
         padding-bottom: 0;
     }
     .promo__title{
-        padding-top: 60px;
+        padding-top: 120px;
     }
     .promo__title span {
         font-size: 56px;
