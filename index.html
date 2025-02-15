@@ -167,7 +167,10 @@
             </div>
             <div class="equipment__content">
                 <p class="equipment__text" data-translate="equipment__text">Устройство эффективно определяет направление и длительность взгляда пользователя, что позволяет определить реакцию на различные стимулы, формы, цвет и тд.</p>
-                <img src="./img/equipment-img.png" alt="equipment img" class="equipment__img">
+                <div id="rotating-object1">
+
+                </div>
+                <!-- <img src="./img/equipment-img.png" alt="equipment img" class="equipment__img"> -->
                 <p class="equipment__text" data-translate="equipment__text">Устройство эффективно определяет направление и длительность взгляда пользователя, что позволяет определить реакцию на различные стимулы, формы, цвет и тд.</p>
             </div>
             <div class="equipment__header">
@@ -176,7 +179,9 @@
             </div>
             <div class="equipment__content">
                 <p class="equipment__text" data-translate="equipment__text2">Частота сердечных ударов даёт представление об эмоциональном состоянии человека, уровне концентрации внимания и вовлеченности.</p>
-                <img src="./img/equipment2-img.png" alt="equipment img" class="equipment__img">
+                <div id="rotating-object2">
+
+                </div>
                 <p class="equipment__text" data-translate="equipment__text3">Устройство измерения электрической активности кожи (гальванометр) устанавливается на руке или пальце испытуемого в тесном контакте с его кожей для оценки возбуждённости человека.</p>
             </div>
         </section>
@@ -432,6 +437,92 @@
       });
     </script>
 
+    
 
+    <script>
+
+        const rotate3D = (url, id) => {
+            const images = [];
+            const totalFrames = 119;
+            let currentFrame = 0;
+            const frameDelay = 50;
+            let animationActive = false;
+            let animationFrame;
+    
+            const rotatingObject = document.getElementById(id);
+    
+            // Предварительная загрузка изображений
+            for (let i = 1; i <= totalFrames; i++) {
+                const img = new Image();
+                img.src = `${url}${i}.png`;
+                images.push(img);
+            }
+    
+            function updateImage() {
+                rotatingObject.style.backgroundImage = `url(${images[currentFrame].src})`;
+            }
+    
+            function nextFrame() {
+                if (!animationActive) return;
+                currentFrame = (currentFrame + 1) % totalFrames;
+                updateImage();
+                animationFrame = requestAnimationFrame(() => setTimeout(nextFrame, frameDelay));
+            }
+    
+            function startAnimation() {
+                if (!animationActive) {
+                    animationActive = true;
+                    nextFrame();
+                }
+            }
+    
+            function stopAnimation() {
+                animationActive = false;
+                cancelAnimationFrame(animationFrame);
+            }
+    
+            // Наблюдатель за видимостью элемента
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        startAnimation();
+                    } else {
+                        stopAnimation();
+                    }
+                });
+            }, { threshold: 0.5 }); // Запуск при 50% видимости
+    
+            observer.observe(rotatingObject);
+    
+            // Ждём загрузки всех изображений перед запуском
+            Promise.all(images.map(img => new Promise(resolve => img.onload = resolve)))
+                .then(() => updateImage());
+        };
+    
+        rotate3D("./img/equipment/eye/", "rotating-object1");
+        rotate3D("./img/equipment/bio/", "rotating-object2");
+    </script>
+
+    
+
+
+    <style>
+        #rotating-object {
+          width: 500px;
+          height: 500px;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+
+        #rotating-object1, #rotating-object2 {
+            width: 500px; /* Установи нужный размер */
+            height: 500px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: block; /* На всякий случай */
+        }
+      </style>
 </body>
 </html>
