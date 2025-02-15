@@ -23,6 +23,9 @@
     <meta name="telegram:title" content="Brain Sale" />
     <meta name="telegram:description" content="Лаборатория нейромаркетинга" />
     <meta name="telegram:image" content="./img/tg-link-preview.png" />
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"></script>
 
     <link rel="icon" href="./img/favicon.svg" type="image/svg+xml">
     
@@ -78,9 +81,13 @@
             </div>
         </div>
     </header>
+
+
+
+
     
     <main class="main container">
-        <section class="promo">
+        <section class="promo promo-parallax" data-rellax-speed="-5" >
             <div class="promo__content">
                 <h1 class="promo__title">
                     <span data-translate="promo__title1">нейро</span>
@@ -419,6 +426,12 @@
     </footer> 
 
     <script src="./js/main.js" type="module"></script>
+
+    <script>document.addEventListener("DOMContentLoaded", function () {
+        new Rellax(".promo-parallax");
+      });
+    </script>
+
 
 </body>
 </html>

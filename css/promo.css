@@ -1,11 +1,26 @@
 .promo{
-    background-image: url('../img/promo-img.png');
+    background-image: url('../img/promo-img.png') ;
+    background-position-x: calc(100% + 105px);
+    background-position-y: calc(155%);
     background-repeat: no-repeat;
     padding-bottom: 100px;
-    background-position-x: 125%;
-    background-position-y: 125%;
+
     padding-top: 40px;
     padding-top: 143px;
+    background-size: 930px;
+
+    background-attachment: fixed; 
+}
+
+
+
+.promo__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
 .promo__content{
@@ -34,7 +49,7 @@
 }
 
 .promo__group{
-    margin-left: 236px;
+    margin-left: 243px;
 }
 
 .promo__icon{

@@ -1,16 +1,17 @@
 .about{
-    padding: 100px 15px 200px;
+    padding-top: 100px;
+    padding-bottom: 200px;
 }
 
 .about__group{
     margin-bottom: 250px;
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
     align-items: flex-start;
 }
 
 .about__title{
-    margin-right: 158px;
+    margin-right: 137px;
     min-width: 80px;
 }
 
@@ -31,7 +32,7 @@
 
 .about__text{
     max-width: 448px;
-    margin: 0 238px 0 auto;
+    margin-left: 478px;
     font-size: 18px;
     line-height: 1.4;
 }
@@ -66,7 +67,7 @@
 }
 
 .areas-work__list{
-    max-width: 59%;
+    max-width: 686px;
     width: 100%;
     list-style: none;
 }
