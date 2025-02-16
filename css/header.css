@@ -186,6 +186,14 @@
     }
 }
 
+@media (max-width: 744px) {
+    .header .container {
+        width: 100%;
+        max-width: 696px;
+    }
+}
+
+
 
 @media (max-width: 600px){
     .header__burger-button{

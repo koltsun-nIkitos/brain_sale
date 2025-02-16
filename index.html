@@ -234,7 +234,7 @@
                 <div class="accordion-item">
                     <button class="accordion-header">
                         <span class="accordion-title">Сколько респондентов требуется для&nbsp;исследования?</span>
-                        <span class="accordion-icon">+</span>
+                        <img class="accordion-icon" src="./img/icons/icon-plus.svg" alt="icon plus">
                     </button>
                     <div class="accordion-content">
                         <p>Для исследования обычно требуется от 5 до 10 респондентов, в зависимости от целей.</p>
@@ -244,7 +244,7 @@
                 <div class="accordion-item">
                     <button class="accordion-header">
                         <span class="accordion-title">Где будет проводиться тестирование?</span>
-                        <span class="accordion-icon">+</span>
+                        <img class="accordion-icon" src="./img/icons/icon-plus.svg" alt="icon plus">
                     </button>
                     <div class="accordion-content">
                         <p>Тестирование может проводиться как в лабораторных условиях, так и удаленно.</p>
@@ -254,7 +254,7 @@
                 <div class="accordion-item">
                     <button class="accordion-header">
                         <span class="accordion-title">В каком виде я получу результаты?</span>
-                        <span class="accordion-icon">+</span>
+                        <img class="accordion-icon" src="./img/icons/icon-plus.svg" alt="icon plus">
                     </button>
                     <div class="accordion-content">
                         <p>Результаты будут предоставлены в виде отчета с графиками и рекомендациями.</p>
@@ -264,7 +264,7 @@
                 <div class="accordion-item">
                     <button class="accordion-header">
                         <span class="accordion-title">Как будет состовляться сценарий исследования?</span>
-                        <span class="accordion-icon">+</span>
+                        <img class="accordion-icon" src="./img/icons/icon-plus.svg" alt="icon plus">
                     </button>
                     <div class="accordion-content">
                         <p>Результаты будут предоставлены в виде отчета с графиками и рекомендациями.</p>
@@ -274,7 +274,7 @@
                 <div class="accordion-item">
                     <button class="accordion-header">
                         <span class="accordion-title">Могу ли я определить зоны интереса (AOI) самостоятельно?</span>
-                        <span class="accordion-icon">+</span>
+                        <img class="accordion-icon" src="./img/icons/icon-plus.svg" alt="icon plus">
                     </button>
                     <div class="accordion-content">
                         <p>Результаты будут предоставлены в виде отчета с графиками и рекомендациями.</p>
@@ -284,7 +284,7 @@
                 <div class="accordion-item">
                     <button class="accordion-header">
                         <span class="accordion-title">Применяются ли другие методы UX-исследований?</span>
-                        <span class="accordion-icon">+</span>
+                        <img class="accordion-icon" src="./img/icons/icon-plus.svg" alt="icon plus">
                     </button>
                     <div class="accordion-content">
                         <p>Результаты будут предоставлены в виде отчета с графиками и рекомендациями.</p>
@@ -501,6 +501,35 @@
     
         rotate3D("./img/equipment/eye/", "rotating-object1");
         rotate3D("./img/equipment/bio/", "rotating-object2");
+
+
+        function checkOverlap() {
+            const promo = document.querySelector('.promo');
+            const about = document.querySelector('.about');
+            
+            if (!promo || !about) return;
+        
+            const promoRect = promo.getBoundingClientRect();
+            const aboutRect = about.querySelector('.about__subtitle').getBoundingClientRect(); // Берём текст, а не всю секцию
+        
+            if (promoRect.bottom > aboutRect.top) {
+                let overlap = promoRect.bottom - aboutRect.top;
+                let blurValue = Math.min(overlap / 20, 10); // Размытие по мере захода
+                promo.style.filter = `blur(${blurValue}px)`;
+            } else {
+                promo.style.filter = 'blur(0px)';
+            }
+        }
+
+
+        // Отслеживаем скролл
+        window.addEventListener('scroll', checkOverlap);
+        window.addEventListener('resize', checkOverlap);
+
+        // Запускаем проверку при загрузке
+        checkOverlap();
+
+
     </script>
 
     

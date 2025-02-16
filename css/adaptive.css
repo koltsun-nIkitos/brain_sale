@@ -54,6 +54,14 @@
 }
 
 
+@media (max-width: 744px) {
+    .container{
+        max-width: 696px;
+        width: 100%;
+    }
+}
+
+
 @media (max-width: 590px) {
     .research__form__start .form__input {
         min-width: 250px;

@@ -8,11 +8,14 @@
     padding-top: 40px;
     padding-top: 143px;
     background-size: 930px;
-
+    will-change: transform;
     background-attachment: fixed; 
 }
 
-
+.promo.blur {
+    filter: blur(8px);
+    transition: filter 0.3s ease-in-out;
+}
 
 .promo__bg {
     position: absolute;
